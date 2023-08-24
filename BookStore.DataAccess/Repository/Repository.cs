@@ -20,21 +20,38 @@ namespace BookStore.DataAccess.Repository
             _db = db;
             dbSet = db.Set<T>();
             //_db.Categories = dbSet
+            _db.Products.Include(p => p.Category).Include(p => p.CategoryId);
         }
         public void Add(T entity)
         {
             dbSet.Add(entity);
         }
 
-        public T Get(Expression<Func<T, bool>> filter)
+        public T Get(Expression<Func<T, bool>> filter, string? includeProperties = null)
         {
             IQueryable<T> query = dbSet.Where(filter);
+            if (!string.IsNullOrEmpty(includeProperties))
+            {
+                foreach (var include in includeProperties
+                    .Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(include);
+                }
+            }
             return query.FirstOrDefault();
         }
 
-        public IEnumerable<T> GetAll()
+        public IEnumerable<T> GetAll(string? includeProperties = null)
         {
             IEnumerable<T> query = dbSet.ToList();
+            if (!string.IsNullOrEmpty(includeProperties))
+            {
+                foreach (var include in includeProperties
+                    .Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = dbSet.Include(include);
+                }
+            }
             return query;
         }
 
