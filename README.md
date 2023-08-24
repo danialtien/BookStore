@@ -30,12 +30,15 @@ model.
 - ViewModel is a specific for a view. Using ViewModel to tranfer data from Controller to View [HERE](https://github.com/danialtien/BookStore/commit/9fba4551adac1b2786c7c308ca4b5e4a281df311#diff-6f162dccee31550e8016359b5438d27c0f3b522c996586ac2c341a61444c0af6)
 - File Upload Input in a form contain enctype="multipart/form-data", input contain type="file", using IFormFile for getting file in controller [HERE](https://github.com/danialtien/BookStore/commit/9fba4551adac1b2786c7c308ca4b5e4a281df311#r125384532)
 - Using tinymce Editor [HERE](https://github.com/danialtien/BookStore/commit/9fba4551adac1b2786c7c308ca4b5e4a281df311#r125384854)
-- Using IWebHostEnvironment which is the builtin function in .NET to access root folder.
+- Using IWebHostEnvironment which is the builtin function in .NET to access root folder.[HERE](https://github.com/danialtien/BookStore/commit/9fba4551adac1b2786c7c308ca4b5e4a281df311#r125384532)
 - Loading Navigation Properties using Include [HERE](https://github.com/danialtien/BookStore/commit/9fba4551adac1b2786c7c308ca4b5e4a281df311#diff-4ce819e22fdf2aab0dc75db8e9a7921c62b8474ff0a0513b540cc16c84d7b839)
 - Using datatables.net plugin to search, pagination, view data table using ajax to custom column of table [HERE](https://github.com/danialtien/BookStore/commit/9fba4551adac1b2786c7c308ca4b5e4a281df311#diff-cbad95f37a7fe446afef055a47e10eda303e6c669bc39741fd8d091685baf1e7)
 - Using sweetalert2.github.io for alert or confirmation popups [HERE](https://github.com/danialtien/BookStore/commit/9fba4551adac1b2786c7c308ca4b5e4a281df311#r125385847)
 
 ### 07. Home and Detail Page
+- Home page and Details UI [HERE]()
+
+### 08. Identity in .NET core
 ...
 
 ### Contact me via tientung2029901@gmail.com or tiendoit20@gmail.com
