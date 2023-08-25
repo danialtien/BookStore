@@ -5,15 +5,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BookStore.DataAccess.Data;
 
-public class ApplicationDBContext : IdentityDbContext<IdentityUser>
+public class ApplicationDbContext : IdentityDbContext<IdentityUser>
 {
-    public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options)
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
 
     }
 
     public DbSet<Category> Categories { get; set; }
     public DbSet<Product> Products { get; set; }
+    public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -39,10 +39,16 @@ model.
 - Home page and Details UI [HERE](https://github.com/danialtien/BookStore/commit/3fdcfab5ea33549b632fe87f56d64f99e44d2340)
 
 ### 08. Identity in .NET core
-- .NET team handle registration, login, logout, authentication,... thanks to Scaffold Identity. Implement IdentityDBContext and add configuration base.OnModelCreating(modelBuilder) in Application DB Context [HERE]()
+- .NET team handle registration, login, logout, authentication,... thanks to Scaffold Identity. Implement IdentityDBContext and add configuration base.OnModelCreating(modelBuilder) in Application DB Context [HERE](https://github.com/danialtien/BookStore/commit/372978f23c91642227366f85986302e207c2197b)
 - Using CLI to generate Scaffold Identity : dotnet aspnet-codegenerator identity -dc BookStore.DataAccess.Data.ApplicationDbContext [HERE](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-7.0&tabs=netcore-cli)
+- Add migration IdentityTables [HERE]()
+- Extend Identity User and add more columns. In AspNetUser table, contains **Discriminator** column to define whether a user is **Application User** or **Identity User**  [HERE]()
+- To use Razor page in ASP.NET MVC need to addRazorPages and MapRazorPages in Program.cs [HERE]()
+- Create AspNetRole(Admin, Customer, Company, Employee) if not exist [HERE](). Invalid of IEmailSender Error fixed [HERE]()
 
 
+
+[HELPER.md](https://www.markdownguide.org/basic-syntax)
 
 ### Contact me via tientung2029901@gmail.com or tiendoit20@gmail.com
 #### Copyright &#169; 2023 danialtien
