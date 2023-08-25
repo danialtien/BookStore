@@ -36,10 +36,13 @@ model.
 - Using sweetalert2.github.io for alert or confirmation popups [HERE](https://github.com/danialtien/BookStore/commit/9fba4551adac1b2786c7c308ca4b5e4a281df311#r125385847)
 
 ### 07. Home and Detail Page
-- Home page and Details UI [HERE]()
+- Home page and Details UI [HERE](https://github.com/danialtien/BookStore/commit/3fdcfab5ea33549b632fe87f56d64f99e44d2340)
 
 ### 08. Identity in .NET core
-...
+- .NET team handle registration, login, logout, authentication,... thanks to Scaffold Identity. Implement IdentityDBContext and add configuration base.OnModelCreating(modelBuilder) in Application DB Context [HERE]()
+- Using CLI to generate Scaffold Identity : dotnet aspnet-codegenerator identity -dc BookStore.DataAccess.Data.ApplicationDbContext [HERE](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-7.0&tabs=netcore-cli)
+
+
 
 ### Contact me via tientung2029901@gmail.com or tiendoit20@gmail.com
 #### Copyright &#169; 2023 danialtien
