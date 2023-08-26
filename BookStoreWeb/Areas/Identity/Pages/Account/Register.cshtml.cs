@@ -10,6 +10,7 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading;
 using System.Threading.Tasks;
+using BookStore.DataAccess.Repository.IRepository;
 using BookStore.Models;
 using BookStore.Utility;
 using Microsoft.AspNetCore.Authentication;
@@ -34,6 +35,7 @@ namespace BookStoreWeb.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<IdentityUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly IUnitOfWork _unitOfWork;
 
         public RegisterModel(
             UserManager<IdentityUser> userManager,
@@ -41,7 +43,8 @@ namespace BookStoreWeb.Areas.Identity.Pages.Account
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender,
-            RoleManager<IdentityRole> roleManager)
+            RoleManager<IdentityRole> roleManager,
+            IUnitOfWork unitOfWork)
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -50,6 +53,7 @@ namespace BookStoreWeb.Areas.Identity.Pages.Account
             _logger = logger;
             _emailSender = emailSender;
             _roleManager = roleManager;
+            _unitOfWork = unitOfWork;
         }
 
         /// <summary>
@@ -117,6 +121,11 @@ namespace BookStoreWeb.Areas.Identity.Pages.Account
             public string? State { get; set; }
             public string? PostalCode { get; set; }
             public string? PhoneNumber { get; set; }
+
+            public string? Company { get; set; }
+
+            [ValidateNever]
+            public IEnumerable<SelectListItem> CompanyList { get; set; }
         }
 
 
@@ -135,6 +144,11 @@ namespace BookStoreWeb.Areas.Identity.Pages.Account
                 {
                     Text = i,
                     Value = i
+                }),
+                CompanyList = _unitOfWork.Company.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString(),
                 })
             };
             ReturnUrl = returnUrl;
@@ -157,6 +171,7 @@ namespace BookStoreWeb.Areas.Identity.Pages.Account
                 user.State = Input.State;
                 user.StreetAddress = Input.StreetAddress;
                 user.PostalCode = Input.PostalCode;
+                
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)

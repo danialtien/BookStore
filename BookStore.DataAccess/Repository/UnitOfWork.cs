@@ -12,6 +12,7 @@ namespace BookStore.DataAccess.Repository
     {
         private ApplicationDbContext _dbContext;
         public ICategoryRepository Category { get; private set; }
+        public ICompanyRepository Company { get; private set; }
         public IProductRepository Product { get; private set; }
 
         public UnitOfWork(ApplicationDbContext db)
@@ -19,6 +20,7 @@ namespace BookStore.DataAccess.Repository
             this._dbContext = db;
             Category = new CategoryRepository(db);
             Product = new ProductRepository(db);
+            Company = new CompanyRepository(db);
         }
         public void Save()
         {

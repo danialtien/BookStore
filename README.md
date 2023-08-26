@@ -47,10 +47,19 @@ model.
 - Create AspNetRole(Admin, Customer, Company, Employee) if not exist [HERE](https://github.com/danialtien/BookStore/commit/60d5e5282a78ea4ce793590e8dfdf7e7b27eced7#diff-d85b3ee1c5dede79ac18239b78b090d950cd6a6582ab852857c4b612842e81d0). Fixed Invalid of [IEmailSender Error](https://github.com/danialtien/BookStore/commit/60d5e5282a78ea4ce793590e8dfdf7e7b27eced7#r125542697)
 - [Assign Role on Registration](https://github.com/danialtien/BookStore/commit/8ba3b468ff3947c94f57c81aca9ee00f34b32e03#diff-d85b3ee1c5dede79ac18239b78b090d950cd6a6582ab852857c4b612842e81d0). IUserTwoFactorTokenProvider Error occur when Register and Add Role to User, because does not contain Default Token Value. [Fixed](https://github.com/danialtien/BookStore/commit/8ba3b468ff3947c94f57c81aca9ee00f34b32e03#r125581922)
 - [Authorization](https://github.com/danialtien/BookStore/commit/8ba3b468ff3947c94f57c81aca9ee00f34b32e03#diff-abdf624dec6f2dbed3b90a3ec51cea2a7f8292a38cfe0ea4c9a2993cee239716). [Configure Application Cookie](https://github.com/danialtien/BookStore/commit/8ba3b468ff3947c94f57c81aca9ee00f34b32e03#r125581993)
-- Update Register UI [Form]()
-- Add [ManageNav]() user Profile
+- Update Register UI [Form](https://github.com/danialtien/BookStore/commit/7543d3dafe96fa33f09bd7932c60bbc8594a7753#diff-d85b3ee1c5dede79ac18239b78b090d950cd6a6582ab852857c4b612842e81d0)
+- Add [ManageNav](https://github.com/danialtien/BookStore/commit/7543d3dafe96fa33f09bd7932c60bbc8594a7753#diff-40040c12eb6cd25cac8cb1cecdb1461fd6a613c51fee02f436f343d2b51c8d05) user Profile
 
 ### 09. Company CRUD
+- Step to create a new model - Company
+	- Set Up new model
+		- Create model Company
+		- Add DBSet to ApplciationDBContext and Seed Data
+		- Add Migration and update Database
+		- Create Company Repository relatives and [Inject]() to UnitOfWork 
+	- Implement [Controller]()
+	- Create [View]() and setup DataTable using [Ajax]()
+- Add Company To [ApplicationUser]() and Display Company [List]()
 
 
 

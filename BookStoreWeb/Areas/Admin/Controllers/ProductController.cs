@@ -2,17 +2,14 @@
 using BookStore.DataAccess.Repository.IRepository;
 using BookStore.Models;
 using BookStore.Models.ViewModels;
-using BookStore.Utility;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 using System.Data;
 
 namespace BookStoreWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = SD.Role_Admin)]
+    //[Authorize(Roles = SD.Role_Admin)]
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -117,35 +114,6 @@ namespace BookStoreWeb.Areas.Admin.Controllers
                 return View(productVM);
             }
         }
-
-        /*public IActionResult Delete(int id)
-        {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            Product product = _unitOfWork.Product.Get(c => c.Id == id);
-            if (product == null)
-            {
-                return NotFound();
-            }
-            return View(product);
-        }
-
-        [HttpPost, ActionName("Delete")]
-        public IActionResult DeletePost(int id)
-        {
-            Product? product = _unitOfWork.Product.Get(c => c.Id == id);
-
-            if (product == null)
-            {
-                return NotFound();
-            }
-            _unitOfWork.Product.Remove(product);
-            _unitOfWork.Save();
-            TempData["success"] = "Product deleted succesfully";
-            return RedirectToAction("Index", "Product");
-        }*/
 
         #region API CAll
         [HttpGet]
