@@ -41,11 +41,11 @@ model.
 ### 08. Identity in .NET core
 - .NET team handle registration, login, logout, authentication,... thanks to Scaffold Identity. Implement IdentityDBContext and add configuration base.OnModelCreating(modelBuilder) in Application DB Context [HERE](https://github.com/danialtien/BookStore/commit/372978f23c91642227366f85986302e207c2197b)
 - Using CLI to generate Scaffold Identity : dotnet aspnet-codegenerator identity -dc BookStore.DataAccess.Data.ApplicationDbContext [HERE](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-7.0&tabs=netcore-cli)
-- Add migration IdentityTables [HERE]()
-- Extend Identity User and add more columns. In AspNetUser table, contains **Discriminator** column to define whether a user is **Application User** or **Identity User**  [HERE]()
-- To use Razor page in ASP.NET MVC need to addRazorPages and MapRazorPages in Program.cs [HERE]()
-- Create AspNetRole(Admin, Customer, Company, Employee) if not exist [HERE](). Invalid of IEmailSender Error fixed [HERE]()
-
+- Add migration IdentityTables
+- Extend [Identity User](https://github.com/danialtien/BookStore/commit/60d5e5282a78ea4ce793590e8dfdf7e7b27eced7#diff-ffa02e7fab824eb624b7ac41140316ad343aa2d026e41c2266794840c2435f84) and add more columns. In AspNetUser table, contains **Discriminator** column to define whether a user is **Application User** or **Identity User**  [HERE](https://github.com/danialtien/BookStore/commit/60d5e5282a78ea4ce793590e8dfdf7e7b27eced7#r125543401)
+- To use Razor page in ASP.NET MVC need to addRazorPages and MapRazorPages in Program.cs [HERE](https://github.com/danialtien/BookStore/commit/60d5e5282a78ea4ce793590e8dfdf7e7b27eced7#diff-a1f630a45ec160b214a5b20d7658cef299880584ee273734176276fc6e3a01cb)
+- Create AspNetRole(Admin, Customer, Company, Employee) if not exist [HERE](https://github.com/danialtien/BookStore/commit/60d5e5282a78ea4ce793590e8dfdf7e7b27eced7#diff-d85b3ee1c5dede79ac18239b78b090d950cd6a6582ab852857c4b612842e81d0). Fixed Invalid of [IEmailSender Error](https://github.com/danialtien/BookStore/commit/60d5e5282a78ea4ce793590e8dfdf7e7b27eced7#r125542697)
+- [Assign Role on Registration]() . IUserTwoFactorTokenProvider Error occur when Register and Add Role to User, because does not contain Default Token Value. [Fixed]()
 
 
 [HELPER.md](https://www.markdownguide.org/basic-syntax)
