@@ -45,7 +45,13 @@ model.
 - Extend [Identity User](https://github.com/danialtien/BookStore/commit/60d5e5282a78ea4ce793590e8dfdf7e7b27eced7#diff-ffa02e7fab824eb624b7ac41140316ad343aa2d026e41c2266794840c2435f84) and add more columns. In AspNetUser table, contains **Discriminator** column to define whether a user is **Application User** or **Identity User**  [HERE](https://github.com/danialtien/BookStore/commit/60d5e5282a78ea4ce793590e8dfdf7e7b27eced7#r125543401)
 - To use Razor page in ASP.NET MVC need to addRazorPages and MapRazorPages in Program.cs [HERE](https://github.com/danialtien/BookStore/commit/60d5e5282a78ea4ce793590e8dfdf7e7b27eced7#diff-a1f630a45ec160b214a5b20d7658cef299880584ee273734176276fc6e3a01cb)
 - Create AspNetRole(Admin, Customer, Company, Employee) if not exist [HERE](https://github.com/danialtien/BookStore/commit/60d5e5282a78ea4ce793590e8dfdf7e7b27eced7#diff-d85b3ee1c5dede79ac18239b78b090d950cd6a6582ab852857c4b612842e81d0). Fixed Invalid of [IEmailSender Error](https://github.com/danialtien/BookStore/commit/60d5e5282a78ea4ce793590e8dfdf7e7b27eced7#r125542697)
-- [Assign Role on Registration]() . IUserTwoFactorTokenProvider Error occur when Register and Add Role to User, because does not contain Default Token Value. [Fixed]()
+- [Assign Role on Registration](https://github.com/danialtien/BookStore/commit/8ba3b468ff3947c94f57c81aca9ee00f34b32e03#diff-d85b3ee1c5dede79ac18239b78b090d950cd6a6582ab852857c4b612842e81d0). IUserTwoFactorTokenProvider Error occur when Register and Add Role to User, because does not contain Default Token Value. [Fixed](https://github.com/danialtien/BookStore/commit/8ba3b468ff3947c94f57c81aca9ee00f34b32e03#r125581922)
+- [Authorization](https://github.com/danialtien/BookStore/commit/8ba3b468ff3947c94f57c81aca9ee00f34b32e03#diff-abdf624dec6f2dbed3b90a3ec51cea2a7f8292a38cfe0ea4c9a2993cee239716). [Configure Application Cookie](https://github.com/danialtien/BookStore/commit/8ba3b468ff3947c94f57c81aca9ee00f34b32e03#r125581993)
+- Update Register UI [Form]()
+- Add [ManageNav]() user Profile
+
+### 09. Company CRUD
+
 
 
 [HELPER.md](https://www.markdownguide.org/basic-syntax)
