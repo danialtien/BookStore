@@ -122,7 +122,7 @@ namespace BookStoreWeb.Areas.Identity.Pages.Account
             public string? PostalCode { get; set; }
             public string? PhoneNumber { get; set; }
 
-            public string? Company { get; set; }
+            public int? CompanyId { get; set; }
 
             [ValidateNever]
             public IEnumerable<SelectListItem> CompanyList { get; set; }
@@ -171,7 +171,10 @@ namespace BookStoreWeb.Areas.Identity.Pages.Account
                 user.State = Input.State;
                 user.StreetAddress = Input.StreetAddress;
                 user.PostalCode = Input.PostalCode;
-                
+                if(Input.Role == SD.Role_Company)
+                {
+                    user.CompanyId = Input.CompanyId;
+                }
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)

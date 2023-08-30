@@ -56,10 +56,22 @@ model.
 		- Create model Company
 		- Add DBSet to ApplciationDBContext and Seed Data
 		- Add Migration and update Database
-		- Create Company Repository relatives and [Inject]() to UnitOfWork 
-	- Implement [Controller]()
-	- Create [View]() and setup DataTable using [Ajax]()
-- Add Company To [ApplicationUser]() and Display Company [List]()
+		- Create Company [Repository](https://github.com/danialtien/BookStore/commit/f317209a991c13568214814fd90c8c1698bb33c0#diff-03409cfd00965fbee969b2731c8063c84f5b0684294335cdabe49de718eb33cb) relatives and [Inject]() to UnitOfWork 
+	- Implement [Controller](https://github.com/danialtien/BookStore/commit/f317209a991c13568214814fd90c8c1698bb33c0#diff-7f6287bb283bd719d80815ec4a88698128fc21f1b5ecfcc54494e1275e4a7a5d)
+	- Create [View](https://github.com/danialtien/BookStore/commit/f317209a991c13568214814fd90c8c1698bb33c0#diff-94d43b695f2ccb77a4406c067bb6ad105031048f8b9486b02d7e08c220338762) and setup DataTable using [Ajax](https://github.com/danialtien/BookStore/commit/f317209a991c13568214814fd90c8c1698bb33c0#diff-68b6bbe2dd01fe548dea52bec6cab783c424cafd28a7ef3712c617dd9a37c8f7)
+- Add Company To [ApplicationUser](https://github.com/danialtien/BookStore/commit/f317209a991c13568214814fd90c8c1698bb33c0#diff-ffa02e7fab824eb624b7ac41140316ad343aa2d026e41c2266794840c2435f84) and Display Company [List](https://github.com/danialtien/BookStore/commit/f317209a991c13568214814fd90c8c1698bb33c0#diff-d85b3ee1c5dede79ac18239b78b090d950cd6a6582ab852857c4b612842e81d0)
+- Register Company User
+
+### 10. Shopping cart
+- Add Book to [Cart]()
+- When retrieving something with ef core it is constantly **tracking** that. Without Update() function, and apply Save() because EF core is traking so the database will be updated automatically. [Fix tracking]()
+- Get Current User using [ClaimsIdentity]()
+- Add [ShoppingCart View Model]()
+- Update/Delete Quantity and Price(50,100) in [Shopping cart]()
+- Add Order [Summary UI]()
+
+### 11. Order Confirmation
+
 
 
 
